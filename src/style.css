@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./Coffee\ Break.ttf') format('truetype'),
+      url('./Coffee\ Break.otf') format('opentype');
+  }
+
+html {
+    background-image: url('./img/bean1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    height: 50px;
+    background-color:#D7CCB7;
+}
+
+
+#content {
+    background-color:#D7CCB7;
+    margin:0 auto;
+    width: fit-content;
+    height: 100%;
+    max-width: 80vw;
+}
+
+.foo {
+    font-family: 'MyFont';
+    font-size: 8vmin;
+}
+
+ul {
+    list-style: none;
+}
+
+.attribution {
+    color:black;
+    text-decoration: none;
+}
+
+.attribution:hover {
+    color: blueviolet;
+}
+
