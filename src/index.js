@@ -3,7 +3,10 @@ import Icon from './img/coffee-beans.png'
 import contactTab from './contact.js'
 import Video from './Videos/Holding\ coffee\ beans.mp4'
 
-// Tab icon
+
+const HomeTab = (function() {
+    function display() {
+    // Tab icon
 const link = document.createElement('link');
 link.rel = 'icon';
 link.href = Icon;
@@ -34,6 +37,7 @@ content.appendChild(backDiv)
 //
 
 const h1 = document.createElement('h1');
+h1.classList.add('h1H');
 h1.textContent = 'WE HAVE YOU COVERED!';
 backDiv.appendChild(h1);
 
@@ -122,20 +126,40 @@ const ATRIBUTTIONS = [
         link: 'https://unsplash.com/photos/BZw2fWK-9lo',
         author: 'by: Jessica Lewis - taken from: unsplash.com',
         assett: 'Filled while teacup image'
+    },
+    {
+        link: 'https://unsplash.com/photos/5G9uIkAXLSc',
+        author: 'by: Jonathan Borba - taken from: unsplash.com',
+        assett: 'empty indoor image'
     }
-]
+];
+
 ulFoot.innerHTML = ATRIBUTTIONS.map((attribution, index) => {
     return `<li class='attributionLi attribution${index}'><a class='attribution' target='_blank' href='${attribution.link}'>${attribution.assett} ${attribution.author}</a></li>`
 }).join('');
-/*
-function displayContact() {
-    content.innerHTML = ''
-    contactTab.addH1()
+
+const homeLi = document.querySelector('#home');
+homeLi.addEventListener('click', displayHome)
+
+function displayHome() {
+    document.querySelector('#content').innerHTML = '';
+    document.body.removeChild(document.querySelector('footer'));
+    display();
 }
-
-//displayContact()
-*/
-
+}
+display();
 window.onunload = function () {
     window.scrollTo(0,0);
 };
+
+const contactLi = document.querySelector('#contact');
+contactLi.addEventListener('click', displayContact);
+
+function displayContact() {
+    content.innerHTML = '';
+    contactTab.display();
+}
+    return {}
+}());
+
+
