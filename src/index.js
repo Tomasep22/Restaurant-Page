@@ -6,7 +6,7 @@ import menuTab from './menu.js'
 
 
 const HomeTab = (function() {
-    
+    let displaying = 'home';
     // tab icon
     const link = document.createElement('link');
     link.rel = 'icon';
@@ -174,6 +174,8 @@ ulFoot.innerHTML = ATRIBUTTIONS.map((attribution, index) => {
 
 // display home tab
 function displayHome() {
+    if(displaying === 'home') return
+    displaying = 'home';
     document.querySelector('#content').innerHTML = '';
     window.scrollTo(0,0);
     display();
@@ -181,6 +183,8 @@ function displayHome() {
 
 // display menu tab
 function displayMenu() {
+    if(displaying === 'menu') return
+    displaying = 'menu';
     content.innerHTML = ''
     window.scrollTo(0,0);
     menuTab.display();
@@ -188,6 +192,8 @@ function displayMenu() {
 
 // disĺay contact tab
 function displayContact() {
+    if(displaying === 'contact') return
+    displaying = 'contact';
     content.innerHTML = '';
     window.scrollTo(0,0);
     contactTab.display();
@@ -206,5 +212,3 @@ window.onunload = function () {
 };
     return {}
 }());
-
-
