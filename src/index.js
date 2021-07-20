@@ -2,6 +2,8 @@ import './style.css';
 import Icon from './img/coffee-beans.png'
 import contactTab from './contact.js'
 import Video from './Videos/Holding\ coffee\ beans.mp4'
+import menuTab from './menu.js'
+
 
 const HomeTab = (function() {
     
@@ -130,8 +132,39 @@ const ATRIBUTTIONS = [
     {
         link: 'https://unsplash.com/photos/5G9uIkAXLSc',
         author: 'by: Jonathan Borba - taken from: unsplash.com',
-        assett: 'empty indoor image'
+        assett: 'Empty indoor image'
+    },
+    {
+        link: 'https://unsplash.com/photos/xO9NotFY4mU',
+        author: 'by: Taisiia Shestopal - taken from: unsplash.com',
+        assett: 'Latte image'
+    },
+    {
+        link: 'https://unsplash.com/photos/ZgaW3FOXRPQ',
+        author: 'by: Sincerely Media - taken from: unsplash.com',
+        assett: 'Hot chocolate image'
+    },
+    {
+        link: 'https://www.pexels.com/es-es/foto/comida-amanecer-cafeina-cafe-7471143/',
+        author: 'by: Jean-Paul Wright - taken from: pexels.com',
+        assett: 'Espresso image'
+    },
+    {
+        link: 'https://www.pexels.com/es-es/foto/vaso-de-delicioso-capuchino-con-espuma-servido-en-platillo-4913337/',
+        author: 'by: Maria Orlova - taken from: pexels.com',
+        assett: 'Capuccino image'
+    },
+    {
+        link: 'https://unsplash.com/photos/EsAoDa4ddqU',
+        author: 'by: nitin pariyar - taken from: unsplash.com',
+        assett: 'Ristretto image'
+    },
+    {
+        link: 'https://www.dafont.com/es/coffee-shop.font',
+        author: 'by: Doug Sheets - taken from: dafont.com',
+        assett: 'Custom Font'
     }
+    
 ];
 
 ulFoot.innerHTML = ATRIBUTTIONS.map((attribution, index) => {
@@ -142,12 +175,21 @@ ulFoot.innerHTML = ATRIBUTTIONS.map((attribution, index) => {
 // display home tab
 function displayHome() {
     document.querySelector('#content').innerHTML = '';
+    window.scrollTo(0,0);
     display();
+}
+
+// display menu tab
+function displayMenu() {
+    content.innerHTML = ''
+    window.scrollTo(0,0);
+    menuTab.display();
 }
 
 // disĺay contact tab
 function displayContact() {
     content.innerHTML = '';
+    window.scrollTo(0,0);
     contactTab.display();
 }
 
@@ -156,6 +198,8 @@ const homeLi = document.querySelector('#home');
 homeLi.addEventListener('click', displayHome)
 const contactLi = document.querySelector('#contact');
 contactLi.addEventListener('click', displayContact);
+const menuLi = document.querySelector('#menu');
+menuLi.addEventListener('click', displayMenu);
 
 window.onunload = function () {
     window.scrollTo(0,0);

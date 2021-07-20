@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'MyFont';
-    src: url('./Fonts/Coffee\ Break.ttf') format('truetype'),
-      url('./Fonts/Coffee\ Break.otf') format('opentype');
+    src: url('./Fonts/Coffee\ Shop\ Bold_Trial\ Version.ttf') format('truetype'),
+      url('./Fonts/Coffee\ Break.ttf') format('truetype');
   }
 
 html {
@@ -40,7 +40,7 @@ nav {
 }
 
 .logo {
-    font-size: 5vw;
+    font-size: 3em;
     position: absolute;
     left: 0;
     top: 0;
@@ -48,9 +48,10 @@ nav {
     justify-content: center;
     align-items: center;
     background-color: rgba(185, 33, 63, 0.829);
-    width: 3.5em;
-    height: 1.6em;
     transition: all 0.2s;
+    height: 8vw;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .logo:hover {
@@ -68,6 +69,7 @@ nav#nav > ul {
     transition: all 0.2s;
     margin-right: 60px;
     z-index: 1;
+    cursor: pointer;
 }
 
 .navLi:hover {
@@ -131,7 +133,8 @@ video {
 .speechP {
     position: absolute;
     width: 50%;
-    font-size: 2.5em;
+    font-size: 2em;
+    line-height: 1.6;
 }
 
 .h1H {
@@ -141,7 +144,7 @@ video {
     z-index: 1;
     width: 100vw;
     top: 50%;
-    font-size: 4em;
+    font-size: 3.5em;
     text-align: center;
     z-index: 2;
 }
@@ -153,6 +156,7 @@ video {
     width: 100px;
     top: 80%;
     left: 47.33%;
+    cursor: pointer;
 }
 
 .arrow {
@@ -167,7 +171,7 @@ video {
     bottom: 25%;
 }
 
-.arrowDiv:hover .arrow{
+.arrowDiv:hover .arrow {
     transform: scale(1.1);
 }
 
@@ -188,12 +192,12 @@ video {
 
 .h2EF {
     display: block;
-    font-size: 3.5em;
+    font-size: 3em;
 }
 
 .lineEF {
     border: 1px solid rgba(185, 33, 63, 0.829);
-    width: 3.5em;
+    width: 4em;
     margin: 0;
 }
 
@@ -207,12 +211,12 @@ video {
 }
 
 .pEF {
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .email {
     width: 50%;
-    font-size: 1.5em;
+    font-size: 1em;
     height: 2.5em;
 }
 
@@ -220,12 +224,13 @@ video {
     display: block;
     background-color: rgba(185, 33, 63, 0.829);
     border: 2px solid black;
-    font-size: 2.5em;
+    font-size: 2em;
     width: 5.5em;
     height: 1.5em;
     color: white;
     margin-top: 40px;
     transition: all 0.4s;
+    cursor: pointer;
 }
 
 .submitEF:hover {
@@ -234,7 +239,7 @@ video {
 
 footer {
     display: block;
-    height: 100px;
+    height: fit-content ;
     width: 100%;
     background-color: rgba(185, 33, 63, 0.829);
     overflow: hidden;
@@ -245,26 +250,30 @@ ul {
 }
 
 .ulFoot {
-    width: 100%;
-    height: 100%;
+    width: fit-content;
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 0;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 .attribution {
-    width: 50%;
-    height: 25%;
     color:black;
     text-decoration: none;
     text-align: center;
-    font-size: 1.05em;
+    font-size: 0.8em;
+    flex: 1;
+    cursor: pointer;
 }
 
 .attributionLi {
     flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 .attribution:hover {
@@ -298,15 +307,81 @@ ul {
     text-align: center;
     width: 200px;
     height: 75px;
-    font-size: 3em;
+    font-size: 2.5em;
     flex: 1;
 } 
 
 .info {
     width: 100%;
-    height: 450px;
+    height: fit-content;
     background-color: rgb(255,255,255);
     color: black;
-    font-size: 2em;
+    font-size: 2.5em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* ------------------------------ Menu Tab -------------------------- */
+
+.mainDiv {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: rgb(255,255,255);
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+}
+
+.intro {
+    width: 100%;
+    height: fit-content;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+.h1M {
+    font-size: 3.5em;
+    border-bottom: 2px solid black;
+    width: fit-content;
+    margin-bottom: 5px;
+}
+
+.introP {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.mContainer {
+    display: flex;
+    color: black;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.mItem {
+    max-height: 500px;
+    width: 250px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+.mImg {
+    min-height: 250px;
+    width: 250px;
+    flex: 1;
+}
+
+.nameNdesc {
+    font-size: 1.5em;
+    padding: 10px;
+    padding-top: 0;
+    flex: 1;
 }
 
