@@ -6,6 +6,7 @@ import menuTab from './menu.js'
 
 
 const HomeTab = (function() {
+    const header = document.querySelector('header');
     let displaying = 'home';
     // tab icon
     const link = document.createElement('link');
@@ -51,7 +52,7 @@ const HomeTab = (function() {
     arrowDiv.appendChild(arrow);
 
     arrowDiv.addEventListener('click', () => {
-    window.scrollTo({top: window.innerHeight, left: 0, behavior: 'smooth'});
+    window.scrollTo({top: window.innerHeight + header.offsetHeight, left: 0, behavior: 'smooth'});
     })
 
     // second div
@@ -185,7 +186,7 @@ function displayHome() {
 function displayMenu() {
     if(displaying === 'menu') return
     displaying = 'menu';
-    content.innerHTML = ''
+    content.innerHTML = '';
     window.scrollTo(0,0);
     menuTab.display();
 }
@@ -199,7 +200,7 @@ function displayContact() {
     contactTab.display();
 }
 
-// add events to tab
+// add events to tabs
 const homeLi = document.querySelector('#home');
 homeLi.addEventListener('click', displayHome)
 const contactLi = document.querySelector('#contact');
